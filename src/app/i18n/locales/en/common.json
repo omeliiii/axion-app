@@ -1,0 +1,13 @@
+{
+  "days_short": "d",
+  "hours_short": "h",
+  "minutes_short": "min",
+  "coming_soon": "Coming Soon",
+  "make_sure_dont_miss": "Make sure you don't miss the launch of our first league.\nDon't worry, we will not spam you!",
+  "notification_success_title": "Success",
+  "notification_warning_title": "Warning",
+  "notification_error_title": "Error",
+  "testnet_popup_title": "Notice: Testing Phase",
+  "testnet_popup_description": "Axion Leagues is currently operating on a **Testnet**. The platform and its services are provided on an “as is” and “as available” basis. While we strive to ensure smooth operation, we make no guarantees regarding the functionality and stability of the Testnet version of the platform and are not liable for any issues that may arise. This includes, but is not limited to, software changes, technical updates, or development modifications.\n\nIf you encounter any malfunctions or have feedback, please use our official channels **@axionleagues** to let us know.",
+  "testnet_popup_button": "I Understand and Accept"
+}

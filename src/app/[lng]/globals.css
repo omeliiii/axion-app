@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('@/css/button.module.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Rimuovere spinner in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@layer components {
+    h1 {
+        @apply font-manrope text-xl font-semibold
+               sm:text-2xl sm:leading-6
+               md:text-3xl md:leading-7
+               lg:text-4xl lg:leading-8
+               xl:text-5xl xl:leading-15.2;
+      }
+      
+    h2 {
+        @apply font-manrope text-lg capitalize
+                sm:text-xl sm:leading-5
+                md:text-2xl md:leading-6
+                lg:text-3xl lg:leading-7
+                xl:text-4xl xl:leading-8;
+    }
+
+    h3 {
+        @apply font-manrope text-base
+                sm:text-lg sm:leading-5
+                md:text-xl md:leading-6
+                lg:text-2xl lg:leading-7
+    }
+
+
+    h4 {
+        @apply font-manrope text-sm font-semibold
+                sm:text-base sm:leading-5
+                md:text-lg md:leading-6
+                lg:text-xl lg:leading-7
+    }
+
+
+    h5 {
+        @apply font-manrope text-sm leading-4 font-semibold
+                md:text-base md:leading-5
+                lg:leading-6
+    }
+
+    p {
+        @apply font-manrope text-sm
+            sm:text-base sm:leading-5
+            md:leading-6
+    }
+
+    .body {
+        @apply font-manrope text-sm
+            sm:text-base sm:leading-5
+            md:leading-6
+    }
+   
+}

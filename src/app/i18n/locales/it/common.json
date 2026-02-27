@@ -1,0 +1,13 @@
+{
+  "days_short": "g",
+  "hours_short": "o",
+  "minutes_short": "min",
+  "coming_soon": "Presto in Arrivo",
+  "make_sure_dont_miss": "Assicurati di non perderti il lancio della nostra prima lega.\nNon preoccuparti, non ti spammeremo!",
+  "notification_success_title": "Successo",
+  "notification_warning_title": "Attenzione",
+  "notification_error_title": "Errore",
+  "testnet_popup_title": "Avviso: Fase di Test",
+  "testnet_popup_description": "La nostra piattaforma è attualmente in **fase di test**, e anche se ci impegniamo a garantire un funzionamento regolare, potrebbero verificarsi malfunzionamenti o errori inaspettati.\n\nScegliendo di utilizzare l'app durante questo periodo, riconosci i rischi inerenti, soprattutto in relazione alle transazioni finanziarie, e accetti di assumerti la piena responsabilità per eventuali problemi o interruzioni che potrebbero sorgere.",
+  "testnet_popup_button": "Ho Capito e Accetto"
+}

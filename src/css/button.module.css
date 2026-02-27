@@ -1,0 +1,172 @@
+@tailwind components;
+
+@layer components {
+  /* Base Button Styles */
+  .button {
+    @apply inline-flex items-center justify-center relative font-manrope text-xs tracking-wider-sm select-none no-underline border-0 rounded-lg;
+    @apply bg-gradient-to-br from-baseline-secondary to-orange-300 text-baseline-neutral-light-black;
+    padding: 0.8125rem 1rem;
+    transition: all 0.5s;
+  }
+
+  /* Interactive States */
+  .button:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
+  .button:not(:disabled):active {
+    @apply outline-none;
+    background-position: 0 0 !important;
+  }
+
+  /* After Pseudo-Element for Active State */
+  .button::after {
+    content: "";
+    @apply block absolute left-0 top-0 w-full h-full rounded-lg opacity-0 transition-all duration-700;
+    box-shadow: 0 0 0 0.375rem #ffa726;
+  }
+
+  .button:not(:disabled):active::after {
+    @apply opacity-100;
+    box-shadow: 0 0 0 0 #ffa726;
+    transition: none;
+  }
+
+  /* Disabled State */
+  .button:disabled {
+    @apply opacity-50;
+  }
+
+  /* Icon and Text Layout */
+  .button span {
+    @apply order-2 flex-shrink-0 relative z-20;
+  }
+
+  .button svg,
+  .button img {
+    @apply order-1 flex-shrink-0 h-4 w-auto mt-[-0.125rem] mb-[-0.125rem] mr-1 relative z-20;
+  }
+
+  /* Modifier Classes */
+
+  /* Full Width */
+  .button--full {
+    @apply w-full;
+  }
+
+  /* No Wrap */
+  .button--nowrap {
+    @apply whitespace-nowrap flex-nowrap;
+  }
+
+  /* Icon on the Right */
+  .button--icon-right span{
+    @apply order-1 ;
+  }
+
+  .button--icon-right svg,
+  .button--icon-right img {
+    @apply ml-1 mr-0;
+  }
+
+  /* Size Variants */
+  .button--big {
+    @apply text-base px-6 py-4 font-medium;
+  }
+
+  .button--big svg,
+  .button--big img {
+    @apply h-5;
+  }
+  
+  .button--small {
+    @apply px-3 py-2.5;
+  }
+
+  .button--xsmall {
+    @apply px-1.5 py-1 text-xs;
+  }
+
+  .button--xsmall svg,
+  .button--xsmall img {
+    @apply h-3 mt-[-0.0625rem] mb-[-0.0625rem];
+  }
+
+  /* Outline Variant */
+  .button--outline {
+    @apply text-baseline-secondary relative overflow-hidden;
+    background: transparent;
+  }
+
+  .button--outline::before {
+    content: "";
+    @apply absolute inset-0 p-px rounded-lg bg-gradient-to-br from-baseline-secondary to-orange-800;
+    background-size: 300% 100%;
+    mask: linear-gradient(#ffa726 0 0) content-box, linear-gradient(#ffa726 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition: all 0.1s;
+  }
+
+  .button--outline:hover:not(:disabled),
+  .button--outline.active:not(:disabled) {
+    @apply text-baseline-neutral-white;
+  }
+
+  .button--outline:hover::before,
+  .button--outline.active::before {
+    background-position: 100% 0;
+  }
+
+  /* Transparent Variant */
+  .button--transparent {
+    @apply border-0 p-0 text-baseline-neutral-white transition-none rounded-none;
+    background: transparent;
+  }
+
+  .button--transparent:hover {
+    @apply text-baseline-secondary border-b border-baseline-secondary;
+  }
+
+  .button--transparent::after {
+    @apply transition-none;
+  }
+}
+
+/* White Outline */
+.button--white--outline {
+  @apply text-baseline-neutral-white relative overflow-hidden;
+  background: transparent;
+}
+
+.button--white--outline::before {
+  content: "";
+  @apply absolute inset-0 p-px rounded-lg bg-gradient-to-br from-baseline-neutral-offwhite to-gray-400;
+  background-size: 300% 100%;
+  mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: all 0.1s;
+}
+
+.button--white--outline:hover:not(:disabled),
+.button--outline.active:not(:disabled) {
+  @apply bg-baseline-secondary bg-opacity-40 border-baseline-secondary transition-colors duration-200;
+}
+
+
+ /* Icon Variant */
+ .button--icon {
+  @apply text-baseline-secondary relative overflow-hidden transition-none;
+  background: transparent;
+}
+
+.button--icon:hover:not(:disabled),
+.button--outline.active:not(:disabled) {
+  @apply text-baseline-neutral-white;
+}
+
+.button--icon::after {
+  content: "";
+  @apply transition-none;
+}
